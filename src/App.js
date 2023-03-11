@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import MyContext from './MyContext';
+//import MyContext from './MyContext';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {useState, useEffect} from 'react';
+//import {useState, useEffect} from 'react';
 //importación de vistas 
 import Home from './views/Home';
 import Login from './views/Login';
@@ -15,18 +15,19 @@ import Favoritos from './views/Favoritos';
 import EnVenta from './views/EnVenta';
 import NotFound from './views/NotFound';
 //importación de componentes
-import Botones from './componentes/Botones';
-import Cards from './componentes/Cards';
-import Navbar from './componentes/Navbar';
-import Sidebar from './componentes/Sidebar';
+import Cards from './components/Cards';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 
 function App() {
-  const [pokemon, setPokemon] = useState([]);
-  const estadoGlobal = {pokemon, setPokemon}
+ //const [pokemon, setPokemon] = useState([]);
+//const estadoGlobal = {pokemon, setPokemon}
+ //<MyContext.Provider value={estadoGlobal}>
+      //</MyContext.Provider>  
 
   return (
     <div className="App">
-      <MyContext.Provider value={estadoGlobal}>
+      
         < BrowserRouter >
           < Navbar />
             < Routes>
@@ -41,8 +42,9 @@ function App() {
               < Route path="/enventa" element={< EnVenta />} />
               < Route path="*" element={<NotFound/>}/>
             </ Routes >    
-        </ BrowserRouter >
-      </MyContext.Provider>      
+        </ BrowserRouter >    
     </div>
   );
 }
+
+export default App;

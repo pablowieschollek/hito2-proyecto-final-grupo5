@@ -1,9 +1,12 @@
+import React from "react";
 import { Container } from "react-bootstrap";
 
-export default function NotFound () {
+ function NotFound () {
     return (
         <Container className="container-notFound">
-        <h1>La ruta que buscas no trae pasteles :/</h1>
+        <h1>Chapalapachala :/</h1>
     </Container>
 ) 
 }
+
+export default NotFound;

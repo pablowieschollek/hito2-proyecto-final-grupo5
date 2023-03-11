@@ -1,11 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-<React.StrictMode>
-<App />
-</React.StrictMode>
-);
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+function Formulario() {
+  return (
+    <Form>
+      <Form.Group className="mb-3">
+        <Form.Control type="text" placeholder="Título de la publicación" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="text" placeholder="Adjunte imagen" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="text" placeholder="Indique un precio" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="email" placeholder="Descripción" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" >
+        <Form.Control type="text" placeholder="Número de contacto" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="Email" placeholder="Correo de contacto" />
+      </Form.Group>
+      
+      <Button variant="primary" type="submit">
+        Publicar
+      </Button>
+    </Form>
+  );
+}
+
+export default Formulario;
