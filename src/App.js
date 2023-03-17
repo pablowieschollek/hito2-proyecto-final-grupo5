@@ -19,20 +19,23 @@ import Botones from './components/Botones';
 import Cards from './components/Cards';
 import BarraNavegacion from './components/Navbar';
 import Sidebar from './components/Sidebar';
+//import { objetos } from './components/Objetos.js';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const endpoint = 'public/objetos.json';
+  const endpoint = "./objetos2.json";
+  console.log(endpoint);
 
-  const getYourProduct = async() => {
-    const res = await fetch(endpoint);
-    let data = await res.json();
-    console.log(data);
+const getYourProduct = async () => {
+  const res = await fetch(endpoint);
+  let data = await res.json();
+  console.log(data);
 
-    setProducts(data); 
-  };
+  setProducts(data);
+};
+
   useEffect(() => {
-    getYourProduct();
+    getYourProduct()
   }, []);
 
 
